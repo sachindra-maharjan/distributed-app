@@ -10,13 +10,13 @@ import (
 )
 
 func main() {
-	log.Run("./app.log")	
+	log.Run("./app.log")
 	host, port := "localhost", "4000"
 	serviceAddress := fmt.Sprintf("http://%v:%v", host, port)
 
 	r := registry.Registration{
 		ServiceName: registry.LogService,
-		ServiceURL: serviceAddress,
+		ServiceURL:  serviceAddress,
 	}
 
 	ctx, err := service.Start(context.Background(),
