@@ -51,6 +51,7 @@ func (suh serviceUpdateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
+	fmt.Printf("Update received: %+v\n", p)
 	prov.Update(p)
 }
 
@@ -109,7 +110,7 @@ func GetProviders(name ServiceName) (string, error) {
 	return prov.get(name)
 }
 
-var prov = providers {
+var prov = providers{
 	services: make(map[ServiceName][]string),
 	mutex:    new(sync.RWMutex),
 }
