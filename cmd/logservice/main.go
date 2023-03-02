@@ -28,6 +28,7 @@ func main() {
 
 	r.RequiredServices = make([]registry.ServiceName, 0)
 	r.ServiceUpdateURL = r.ServiceURL + "/services"
+	r.HeartbeatURL = r.ServiceURL + "/heartbeat"
 
 	if err != nil {
 		stlog.Fatal(err)

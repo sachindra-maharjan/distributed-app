@@ -2,4 +2,4 @@ log/**
 gradingservice
 logservice
 registryservice
-.vscode/**
+.vscode/
